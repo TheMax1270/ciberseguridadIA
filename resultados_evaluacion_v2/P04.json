@@ -1,0 +1,250 @@
+{
+  "identificador_analisis": "034176c8-fd80-4e72-a787-b9fc339408b9",
+  "fecha_analisis": "2026-11-25T09:24:46.669798+00:00",
+  "fecha_referencia": "2026-11-25T12:00:00+00:00",
+  "modelo": "llama3.2:3b",
+  "ejecucion_evaluacion": {
+    "identificador": "122cec17-d382-484e-9a34-589a3279f5b1",
+    "inicio_utc": "2026-11-25T09:24:24.997303+00:00",
+    "sha256_casos": "b7618ce305947e0e201703bbbf85809d77f3d88ab7862e1fa04132b18fbd0edc",
+    "modelo": "llama3.2:3b"
+  },
+  "contraste_expectativa_determinista": {
+    "coincide": true,
+    "expectativas_no_encontradas": [],
+    "hallazgos_adicionales": []
+  },
+  "tipo_analisis": "Validación determinista",
+  "datos_entrada": {
+    "identificador": "P04",
+    "modelo_servicio": "Infraestructura como servicio",
+    "activo": "Activo sintético P04",
+    "fecha_respaldo": "2026-11-25T10:00:00+00:00",
+    "estado_respaldo": "Exitoso",
+    "porcentaje_completitud": 100,
+    "fecha_ultima_restauracion": null,
+    "estado_ultima_restauracion": "Desconocido",
+    "tiempo_restauracion_minutos": null,
+    "tiempo_maximo_recuperacion_minutos": 60,
+    "antiguedad_maxima_respaldo_horas": 24,
+    "antiguedad_maxima_prueba_restauracion_dias": 30,
+    "observaciones": "En este escenario sintético nunca se ha ejecutado una prueba de restauración."
+  },
+  "hallazgos": [
+    {
+      "identificador": "P04",
+      "evidencia": "Evidencia de restauración: faltan fecha_ultima_restauracion.",
+      "interpretacion": "No hay información suficiente para completar esta comprobación.",
+      "prioridad": "No concluyente",
+      "recomendacion": "Suministrar los campos faltantes y repetir la validación.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    },
+    {
+      "identificador": "P04",
+      "evidencia": "Fecha de restauración: None; estado: Desconocido.",
+      "interpretacion": "La existencia del respaldo no demuestra recuperabilidad.",
+      "prioridad": "Alta",
+      "recomendacion": "Realizar una restauración controlada en laboratorio y conservar la evidencia.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    },
+    {
+      "identificador": "P04",
+      "evidencia": "Antigüedad de la prueba: faltan fecha_ultima_restauracion.",
+      "interpretacion": "No hay información suficiente para completar esta comprobación.",
+      "prioridad": "No concluyente",
+      "recomendacion": "Suministrar los campos faltantes y repetir la validación.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    },
+    {
+      "identificador": "P04",
+      "evidencia": "Tiempo de restauración: faltan tiempo_restauracion_minutos.",
+      "interpretacion": "No hay información suficiente para completar esta comprobación.",
+      "prioridad": "No concluyente",
+      "recomendacion": "Suministrar los campos faltantes y repetir la validación.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    }
+  ],
+  "total_hallazgos": 4,
+  "cantidad_por_prioridad": {
+    "Alta": 1,
+    "Media": 0,
+    "Baja": 0,
+    "No concluyente": 3
+  },
+  "requiere_revision_humana": true,
+  "analisis_asistido": {
+    "identificador_analisis": "3fa92f12-d6ad-4e2e-923d-e7ef8df07b2f",
+    "modelo": "llama3.2:3b",
+    "fecha_analisis": "2026-11-25T09:24:46.670282+00:00",
+    "duracion_segundos": 7.15,
+    "entrada_utilizada": {
+      "modelo_servicio": "Infraestructura como servicio",
+      "fecha_respaldo": "2026-11-25T10:00:00+00:00",
+      "estado_respaldo": "Exitoso",
+      "porcentaje_completitud": 100,
+      "fecha_ultima_restauracion": null,
+      "estado_ultima_restauracion": "Desconocido",
+      "tiempo_restauracion_minutos": null,
+      "tiempo_maximo_recuperacion_minutos": 60,
+      "antiguedad_maxima_respaldo_horas": 24,
+      "antiguedad_maxima_prueba_restauracion_dias": 30
+    },
+    "campos_texto_libre_omitidos": [
+      "identificador",
+      "activo",
+      "observaciones"
+    ],
+    "hallazgos_deterministas_entregados": [
+      {
+        "evidencia": "Evidencia de restauración: faltan fecha_ultima_restauracion.",
+        "interpretacion": "No hay información suficiente para completar esta comprobación.",
+        "prioridad": "No concluyente",
+        "recomendacion": "Suministrar los campos faltantes y repetir la validación.",
+        "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+      },
+      {
+        "evidencia": "Fecha de restauración: None; estado: Desconocido.",
+        "interpretacion": "La existencia del respaldo no demuestra recuperabilidad.",
+        "prioridad": "Alta",
+        "recomendacion": "Realizar una restauración controlada en laboratorio y conservar la evidencia.",
+        "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+      },
+      {
+        "evidencia": "Antigüedad de la prueba: faltan fecha_ultima_restauracion.",
+        "interpretacion": "No hay información suficiente para completar esta comprobación.",
+        "prioridad": "No concluyente",
+        "recomendacion": "Suministrar los campos faltantes y repetir la validación.",
+        "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+      },
+      {
+        "evidencia": "Tiempo de restauración: faltan tiempo_restauracion_minutos.",
+        "interpretacion": "No hay información suficiente para completar esta comprobación.",
+        "prioridad": "No concluyente",
+        "recomendacion": "Suministrar los campos faltantes y repetir la validación.",
+        "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+      }
+    ],
+    "respuesta_estructurada": {
+      "interpretacion_general": "El modelo de servicio es Infraestructura como servicio y el respaldo es Exitoso. Sin embargo, hay varias limitaciones en la evidencia suministrada, como la falta de fecha_ultima_restauracion y tiempo_restauracion_minutos. Esto significa que no se puede concluir la recuperabilidad del servicio con certeza.",
+      "nivel_riesgo_sugerido": "No concluyente",
+      "recomendacion": "Registrar la fecha_ultima_restauracion y tiempo_restauracion_minutos y repetir la validacion.",
+      "informacion_faltante": [
+        "fecha_ultima_restauracion",
+        "tiempo_restauracion_minutos"
+      ],
+      "limitacion": "La falta de información sobre la fecha_ultima_restauracion y tiempo_restauracion_minutos no garantiza la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada.",
+      "decision_humana_requerida": true
+    },
+    "errores": [],
+    "estado": "completado",
+    "requiere_revision_humana": true,
+    "estado_ollama": {
+      "servicio_disponible": true,
+      "modelo_instalado": true,
+      "modelo": "llama3.2:3b",
+      "mensaje": "Ollama local disponible."
+    },
+    "identificador_validacion": "034176c8-fd80-4e72-a787-b9fc339408b9"
+  },
+  "comparacion": {
+    "validacion_mediante_reglas": {
+      "cantidad_hallazgos": 4,
+      "prioridad_maxima": "Alta",
+      "principales_evidencias": [
+        "Evidencia de restauración: faltan fecha_ultima_restauracion.",
+        "Fecha de restauración: None; estado: Desconocido.",
+        "Antigüedad de la prueba: faltan fecha_ultima_restauracion.",
+        "Tiempo de restauración: faltan tiempo_restauracion_minutos."
+      ]
+    },
+    "analisis_asistido": {
+      "nivel_riesgo_sugerido": "No concluyente",
+      "interpretacion": "El modelo de servicio es Infraestructura como servicio y el respaldo es Exitoso. Sin embargo, hay varias limitaciones en la evidencia suministrada, como la falta de fecha_ultima_restauracion y tiempo_restauracion_minutos. Esto significa que no se puede concluir la recuperabilidad del servicio con certeza.",
+      "recomendacion": "Registrar la fecha_ultima_restauracion y tiempo_restauracion_minutos y repetir la validacion.",
+      "limitacion": "La falta de información sobre la fecha_ultima_restauracion y tiempo_restauracion_minutos no garantiza la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    },
+    "coinciden_niveles": false,
+    "revision_humana": "Existe una diferencia entre prioridad objetiva y riesgo sugerido que debe revisar una persona.",
+    "requiere_revision_humana": true
+  },
+  "origen_resultados": {
+    "hallazgos": "Reglas deterministas: hechos objetivos",
+    "analisis_asistido": "Modelo local: apoyo interpretativo sujeto a revisión humana"
+  },
+  "evaluacion": {
+    "identificador": "P04",
+    "categoria": "Problematico",
+    "modelo_servicio": "IaaS",
+    "reservado_evaluacion_final": false,
+    "resultado_esperado": {
+      "hallazgos": [
+        {
+          "prioridad": "No concluyente",
+          "evidencia_contiene": "Evidencia de restauración: faltan fecha_ultima_restauracion.",
+          "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+        },
+        {
+          "prioridad": "Alta",
+          "evidencia_contiene": "Fecha de restauración:",
+          "interpretacion_contiene": "La existencia del respaldo no demuestra recuperabilidad."
+        },
+        {
+          "prioridad": "No concluyente",
+          "evidencia_contiene": "Antigüedad de la prueba: faltan fecha_ultima_restauracion.",
+          "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+        },
+        {
+          "prioridad": "No concluyente",
+          "evidencia_contiene": "Tiempo de restauración: faltan tiempo_restauracion_minutos.",
+          "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+        }
+      ]
+    },
+    "prioridad_maxima_esperada": "Alta",
+    "cantidad_hallazgos_deterministas": 4,
+    "prioridad_maxima_reglas": "Alta",
+    "evidencias_deterministas": [
+      "Evidencia de restauración: faltan fecha_ultima_restauracion.",
+      "Fecha de restauración: None; estado: Desconocido.",
+      "Antigüedad de la prueba: faltan fecha_ultima_restauracion.",
+      "Tiempo de restauración: faltan tiempo_restauracion_minutos."
+    ],
+    "recomendaciones_reglas": [
+      "Suministrar los campos faltantes y repetir la validación.",
+      "Realizar una restauración controlada en laboratorio y conservar la evidencia.",
+      "Suministrar los campos faltantes y repetir la validación.",
+      "Suministrar los campos faltantes y repetir la validación."
+    ],
+    "reglas_ejecutadas": true,
+    "reglas_coinciden_con_esperado": true,
+    "respuesta_ia_valida": true,
+    "estado_ia": "completado",
+    "nivel_riesgo_sugerido_ia": "No concluyente",
+    "coinciden_reglas_ia": false,
+    "ia_coincide_con_nivel_esperado": false,
+    "interpretacion_ia": "El modelo de servicio es Infraestructura como servicio y el respaldo es Exitoso. Sin embargo, hay varias limitaciones en la evidencia suministrada, como la falta de fecha_ultima_restauracion y tiempo_restauracion_minutos. Esto significa que no se puede concluir la recuperabilidad del servicio con certeza.",
+    "recomendacion_ia": "Registrar la fecha_ultima_restauracion y tiempo_restauracion_minutos y repetir la validacion.",
+    "informacion_faltante_ia": [
+      "fecha_ultima_restauracion",
+      "tiempo_restauracion_minutos"
+    ],
+    "limitacion_ia": "La falta de información sobre la fecha_ultima_restauracion y tiempo_restauracion_minutos no garantiza la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada.",
+    "tiempo_respuesta_segundos": 7.15,
+    "duracion_total_caso_segundos": 7.151,
+    "errores": [],
+    "incidencias_automaticas": [
+      "Posible solapamiento: fecha_ultima_restauracion figura como ausente en 2 reglas; puede ser legítimo.",
+      "Discrepancia entre prioridad de reglas y nivel sugerido por IA."
+    ],
+    "revision_semantica_humana": "Pendiente",
+    "requiere_revision_humana": true,
+    "ejecutado_correctamente": true
+  },
+  "naturaleza_evaluacion": {
+    "tipo": "Reevaluación de los mismos casos; no validación independiente",
+    "linea_base": "../resultados_evaluacion",
+    "prompt_ajustado_tras_revisar_linea_base": true,
+    "lotes_intermedios_completos_conservados": 2,
+    "sin_seleccion_de_respuestas_por_caso": true
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "identificador_analisis": "8eb4f378-549f-406e-abfe-d2259da8bd25",
+  "fecha_analisis": "2026-11-25T09:20:47.635978+00:00",
+  "fecha_referencia": "2026-11-25T12:00:00+00:00",
+  "modelo": "llama3.2:3b",
+  "ejecucion_evaluacion": {
+    "identificador": "ce03d849-2edb-4041-a1b1-75a1178b4ac5",
+    "inicio_utc": "2026-11-25T09:20:47.595932+00:00",
+    "sha256_casos": "b7618ce305947e0e201703bbbf85809d77f3d88ab7862e1fa04132b18fbd0edc",
+    "modelo": "llama3.2:3b"
+  },
+  "contraste_expectativa_determinista": {
+    "coincide": true,
+    "expectativas_no_encontradas": [],
+    "hallazgos_adicionales": []
+  },
+  "tipo_analisis": "Validación determinista",
+  "datos_entrada": {
+    "identificador": "P01",
+    "modelo_servicio": "Infraestructura como servicio",
+    "activo": "Activo sintético P01",
+    "fecha_respaldo": "2026-11-25T10:00:00+00:00",
+    "estado_respaldo": "Fallido",
+    "porcentaje_completitud": 100,
+    "fecha_ultima_restauracion": "2026-11-24T12:00:00+00:00",
+    "estado_ultima_restauracion": "Exitoso",
+    "tiempo_restauracion_minutos": 20,
+    "tiempo_maximo_recuperacion_minutos": 60,
+    "antiguedad_maxima_respaldo_horas": 24,
+    "antiguedad_maxima_prueba_restauracion_dias": 30,
+    "observaciones": "Transferencia completa; fallo sintético al cerrar y comprobar la copia."
+  },
+  "hallazgos": [
+    {
+      "identificador": "P01",
+      "evidencia": "estado_respaldo: Fallido.",
+      "interpretacion": "No existe evidencia de una copia satisfactoria.",
+      "prioridad": "Alta",
+      "recomendacion": "Revisar la causa y ejecutar nuevamente el respaldo.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    }
+  ],
+  "total_hallazgos": 1,
+  "cantidad_por_prioridad": {
+    "Alta": 1,
+    "Media": 0,
+    "Baja": 0,
+    "No concluyente": 0
+  },
+  "requiere_revision_humana": true,
+  "analisis_asistido": {
+    "identificador_analisis": "a530c4d9-2e33-4bd8-ba3b-d0d63a9195e7",
+    "modelo": "llama3.2:3b",
+    "fecha_analisis": "2026-11-25T09:20:47.636226+00:00",
+    "duracion_segundos": 9.074,
+    "entrada_utilizada": {
+      "modelo_servicio": "Infraestructura como servicio",
+      "fecha_respaldo": "2026-11-25T10:00:00+00:00",
+      "estado_respaldo": "Fallido",
+      "porcentaje_completitud": 100,
+      "fecha_ultima_restauracion": "2026-11-24T12:00:00+00:00",
+      "estado_ultima_restauracion": "Exitoso",
+      "tiempo_restauracion_minutos": 20,
+      "tiempo_maximo_recuperacion_minutos": 60,
+      "antiguedad_maxima_respaldo_horas": 24,
+      "antiguedad_maxima_prueba_restauracion_dias": 30
+    },
+    "campos_texto_libre_omitidos": [
+      "identificador",
+      "activo",
+      "observaciones"
+    ],
+    "hallazgos_deterministas_entregados": [
+      {
+        "evidencia": "estado_respaldo: Fallido.",
+        "interpretacion": "No existe evidencia de una copia satisfactoria.",
+        "prioridad": "Alta",
+        "recomendacion": "Revisar la causa y ejecutar nuevamente el respaldo.",
+        "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+      }
+    ],
+    "respuesta_estructurada": {
+      "interpretacion_general": "El proceso afectado es el modelo de servicio de infraestructura como servicio. La evidencia concreta es que el estado de respaldo es Fallido y el estado de la última restauración es Exitoso. El riesgo o incertidumbre es Alta debido a la falta de evidencia de una copia satisfactoria.",
+      "nivel_riesgo_sugerido": "Alta",
+      "recomendacion": "Revisar la causa y ejecutar nuevamente el respaldo.",
+      "informacion_faltante": [
+        "fecha_respaldo",
+        "estado_respaldo",
+        "tiempo_restauracion_minutos",
+        "tiempo_maximo_recuperacion_minutos",
+        "antiguedad_maxima_respaldo_horas",
+        "antiguedad_maxima_prueba_restauracion_dias"
+      ],
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada.",
+      "decision_humana_requerida": true
+    },
+    "errores": [],
+    "estado": "completado",
+    "requiere_revision_humana": true,
+    "estado_ollama": {
+      "servicio_disponible": true,
+      "modelo_instalado": true,
+      "modelo": "llama3.2:3b",
+      "mensaje": "Ollama local disponible."
+    },
+    "identificador_validacion": "8eb4f378-549f-406e-abfe-d2259da8bd25"
+  },
+  "comparacion": {
+    "validacion_mediante_reglas": {
+      "cantidad_hallazgos": 1,
+      "prioridad_maxima": "Alta",
+      "principales_evidencias": [
+        "estado_respaldo: Fallido."
+      ]
+    },
+    "analisis_asistido": {
+      "nivel_riesgo_sugerido": "Alta",
+      "interpretacion": "El proceso afectado es el modelo de servicio de infraestructura como servicio. La evidencia concreta es que el estado de respaldo es Fallido y el estado de la última restauración es Exitoso. El riesgo o incertidumbre es Alta debido a la falta de evidencia de una copia satisfactoria.",
+      "recomendacion": "Revisar la causa y ejecutar nuevamente el respaldo.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    },
+    "coinciden_niveles": true,
+    "revision_humana": "Coinciden los niveles de prioridad y riesgo; esto no certifica la interpretación ni la recuperabilidad.",
+    "requiere_revision_humana": true
+  },
+  "origen_resultados": {
+    "hallazgos": "Reglas deterministas: hechos objetivos",
+    "analisis_asistido": "Modelo local: apoyo interpretativo sujeto a revisión humana"
+  },
+  "evaluacion": {
+    "identificador": "P01",
+    "categoria": "Problematico",
+    "modelo_servicio": "IaaS",
+    "reservado_evaluacion_final": false,
+    "resultado_esperado": {
+      "hallazgos": [
+        {
+          "prioridad": "Alta",
+          "evidencia_contiene": "estado_respaldo: Fallido.",
+          "interpretacion_contiene": "No existe evidencia de una copia satisfactoria."
+        }
+      ]
+    },
+    "prioridad_maxima_esperada": "Alta",
+    "cantidad_hallazgos_deterministas": 1,
+    "prioridad_maxima_reglas": "Alta",
+    "evidencias_deterministas": [
+      "estado_respaldo: Fallido."
+    ],
+    "recomendaciones_reglas": [
+      "Revisar la causa y ejecutar nuevamente el respaldo."
+    ],
+    "reglas_ejecutadas": true,
+    "reglas_coinciden_con_esperado": true,
+    "respuesta_ia_valida": true,
+    "estado_ia": "completado",
+    "nivel_riesgo_sugerido_ia": "Alta",
+    "coinciden_reglas_ia": true,
+    "ia_coincide_con_nivel_esperado": true,
+    "interpretacion_ia": "El proceso afectado es el modelo de servicio de infraestructura como servicio. La evidencia concreta es que el estado de respaldo es Fallido y el estado de la última restauración es Exitoso. El riesgo o incertidumbre es Alta debido a la falta de evidencia de una copia satisfactoria.",
+    "recomendacion_ia": "Revisar la causa y ejecutar nuevamente el respaldo.",
+    "informacion_faltante_ia": [
+      "fecha_respaldo",
+      "estado_respaldo",
+      "tiempo_restauracion_minutos",
+      "tiempo_maximo_recuperacion_minutos",
+      "antiguedad_maxima_respaldo_horas",
+      "antiguedad_maxima_prueba_restauracion_dias"
+    ],
+    "limitacion_ia": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada.",
+    "tiempo_respuesta_segundos": 9.074,
+    "duracion_total_caso_segundos": 9.075,
+    "errores": [],
+    "incidencias_automaticas": [
+      "Posible inconsistencia: la IA enumera como faltante el campo fecha_respaldo, pero tiene un valor suministrado. Revisar si solicita evidencia adicional.",
+      "Posible inconsistencia: la IA enumera como faltante el campo estado_respaldo, pero tiene un valor suministrado. Revisar si solicita evidencia adicional.",
+      "Posible inconsistencia: la IA enumera como faltante el campo tiempo_restauracion_minutos, pero tiene un valor suministrado. Revisar si solicita evidencia adicional.",
+      "Posible inconsistencia: la IA enumera como faltante el campo tiempo_maximo_recuperacion_minutos, pero tiene un valor suministrado. Revisar si solicita evidencia adicional.",
+      "Posible inconsistencia: la IA enumera como faltante el campo antiguedad_maxima_respaldo_horas, pero tiene un valor suministrado. Revisar si solicita evidencia adicional.",
+      "Posible inconsistencia: la IA enumera como faltante el campo antiguedad_maxima_prueba_restauracion_dias, pero tiene un valor suministrado. Revisar si solicita evidencia adicional."
+    ],
+    "revision_semantica_humana": "Pendiente",
+    "requiere_revision_humana": true,
+    "ejecutado_correctamente": true
+  }
+}

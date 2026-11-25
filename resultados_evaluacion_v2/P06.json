@@ -1,0 +1,178 @@
+{
+  "identificador_analisis": "f7e27a30-8491-45bc-92d9-003aea2bfe38",
+  "fecha_analisis": "2026-11-25T09:24:58.588201+00:00",
+  "fecha_referencia": "2026-11-25T12:00:00+00:00",
+  "modelo": "llama3.2:3b",
+  "ejecucion_evaluacion": {
+    "identificador": "122cec17-d382-484e-9a34-589a3279f5b1",
+    "inicio_utc": "2026-11-25T09:24:24.997303+00:00",
+    "sha256_casos": "b7618ce305947e0e201703bbbf85809d77f3d88ab7862e1fa04132b18fbd0edc",
+    "modelo": "llama3.2:3b"
+  },
+  "contraste_expectativa_determinista": {
+    "coincide": true,
+    "expectativas_no_encontradas": [],
+    "hallazgos_adicionales": []
+  },
+  "tipo_analisis": "Validación determinista",
+  "datos_entrada": {
+    "identificador": "P06",
+    "modelo_servicio": "Software como servicio",
+    "activo": "Activo sintético P06",
+    "fecha_respaldo": "2026-11-25T10:00:00+00:00",
+    "estado_respaldo": "Exitoso",
+    "porcentaje_completitud": 100,
+    "fecha_ultima_restauracion": "2026-11-24T12:00:00+00:00",
+    "estado_ultima_restauracion": "Exitoso",
+    "tiempo_restauracion_minutos": 240,
+    "tiempo_maximo_recuperacion_minutos": 60,
+    "antiguedad_maxima_respaldo_horas": 24,
+    "antiguedad_maxima_prueba_restauracion_dias": 30,
+    "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+  },
+  "hallazgos": [
+    {
+      "identificador": "P06",
+      "evidencia": "Restauración: 240 minutos; máximo permitido: 60 minutos.",
+      "interpretacion": "La restauración técnicamente puede existir, pero no cumple el objetivo de recuperación definido.",
+      "prioridad": "Alta",
+      "recomendacion": "Revisar el procedimiento y los recursos para cumplir el tiempo máximo.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    }
+  ],
+  "total_hallazgos": 1,
+  "cantidad_por_prioridad": {
+    "Alta": 1,
+    "Media": 0,
+    "Baja": 0,
+    "No concluyente": 0
+  },
+  "requiere_revision_humana": true,
+  "analisis_asistido": {
+    "identificador_analisis": "ca3d6ee1-d8da-47ae-b24e-bd810d21d0b1",
+    "modelo": "llama3.2:3b",
+    "fecha_analisis": "2026-11-25T09:24:58.588367+00:00",
+    "duracion_segundos": 4.915,
+    "entrada_utilizada": {
+      "modelo_servicio": "Software como servicio",
+      "fecha_respaldo": "2026-11-25T10:00:00+00:00",
+      "estado_respaldo": "Exitoso",
+      "porcentaje_completitud": 100,
+      "fecha_ultima_restauracion": "2026-11-24T12:00:00+00:00",
+      "estado_ultima_restauracion": "Exitoso",
+      "tiempo_restauracion_minutos": 240,
+      "tiempo_maximo_recuperacion_minutos": 60,
+      "antiguedad_maxima_respaldo_horas": 24,
+      "antiguedad_maxima_prueba_restauracion_dias": 30
+    },
+    "campos_texto_libre_omitidos": [
+      "identificador",
+      "activo",
+      "observaciones"
+    ],
+    "hallazgos_deterministas_entregados": [
+      {
+        "evidencia": "Restauración: 240 minutos; máximo permitido: 60 minutos.",
+        "interpretacion": "La restauración técnicamente puede existir, pero no cumple el objetivo de recuperación definido.",
+        "prioridad": "Alta",
+        "recomendacion": "Revisar el procedimiento y los recursos para cumplir el tiempo máximo.",
+        "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+      }
+    ],
+    "respuesta_estructurada": {
+      "interpretacion_general": "La restauración técnicamente puede existir, pero no cumple el objetivo de recuperación definido.",
+      "nivel_riesgo_sugerido": "Alta",
+      "recomendacion": "Revisar el procedimiento y los recursos para cumplir el tiempo máximo.",
+      "informacion_faltante": [
+        "tiempo_restauracion_minutos"
+      ],
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada.",
+      "decision_humana_requerida": true
+    },
+    "errores": [],
+    "estado": "completado",
+    "requiere_revision_humana": true,
+    "estado_ollama": {
+      "servicio_disponible": true,
+      "modelo_instalado": true,
+      "modelo": "llama3.2:3b",
+      "mensaje": "Ollama local disponible."
+    },
+    "identificador_validacion": "f7e27a30-8491-45bc-92d9-003aea2bfe38"
+  },
+  "comparacion": {
+    "validacion_mediante_reglas": {
+      "cantidad_hallazgos": 1,
+      "prioridad_maxima": "Alta",
+      "principales_evidencias": [
+        "Restauración: 240 minutos; máximo permitido: 60 minutos."
+      ]
+    },
+    "analisis_asistido": {
+      "nivel_riesgo_sugerido": "Alta",
+      "interpretacion": "La restauración técnicamente puede existir, pero no cumple el objetivo de recuperación definido.",
+      "recomendacion": "Revisar el procedimiento y los recursos para cumplir el tiempo máximo.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    },
+    "coinciden_niveles": true,
+    "revision_humana": "Coinciden los niveles de prioridad y riesgo; esto no certifica la interpretación ni la recuperabilidad.",
+    "requiere_revision_humana": true
+  },
+  "origen_resultados": {
+    "hallazgos": "Reglas deterministas: hechos objetivos",
+    "analisis_asistido": "Modelo local: apoyo interpretativo sujeto a revisión humana"
+  },
+  "evaluacion": {
+    "identificador": "P06",
+    "categoria": "Problematico",
+    "modelo_servicio": "SaaS",
+    "reservado_evaluacion_final": true,
+    "resultado_esperado": {
+      "hallazgos": [
+        {
+          "prioridad": "Alta",
+          "evidencia_contiene": "máximo permitido:",
+          "interpretacion_contiene": "no cumple el objetivo de recuperación definido."
+        }
+      ]
+    },
+    "prioridad_maxima_esperada": "Alta",
+    "cantidad_hallazgos_deterministas": 1,
+    "prioridad_maxima_reglas": "Alta",
+    "evidencias_deterministas": [
+      "Restauración: 240 minutos; máximo permitido: 60 minutos."
+    ],
+    "recomendaciones_reglas": [
+      "Revisar el procedimiento y los recursos para cumplir el tiempo máximo."
+    ],
+    "reglas_ejecutadas": true,
+    "reglas_coinciden_con_esperado": true,
+    "respuesta_ia_valida": true,
+    "estado_ia": "completado",
+    "nivel_riesgo_sugerido_ia": "Alta",
+    "coinciden_reglas_ia": true,
+    "ia_coincide_con_nivel_esperado": true,
+    "interpretacion_ia": "La restauración técnicamente puede existir, pero no cumple el objetivo de recuperación definido.",
+    "recomendacion_ia": "Revisar el procedimiento y los recursos para cumplir el tiempo máximo.",
+    "informacion_faltante_ia": [
+      "tiempo_restauracion_minutos"
+    ],
+    "limitacion_ia": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada.",
+    "tiempo_respuesta_segundos": 4.915,
+    "duracion_total_caso_segundos": 4.916,
+    "errores": [],
+    "incidencias_automaticas": [
+      "Posible inconsistencia: la IA enumera como faltante el campo tiempo_restauracion_minutos, pero tiene un valor suministrado. Revisar si solicita evidencia adicional."
+    ],
+    "revision_semantica_humana": "Pendiente",
+    "requiere_revision_humana": true,
+    "ejecutado_correctamente": true
+  },
+  "naturaleza_evaluacion": {
+    "tipo": "Reevaluación de los mismos casos; no validación independiente",
+    "linea_base": "../resultados_evaluacion",
+    "prompt_ajustado_tras_revisar_linea_base": true,
+    "lotes_intermedios_completos_conservados": 2,
+    "sin_seleccion_de_respuestas_por_caso": true
+  }
+}

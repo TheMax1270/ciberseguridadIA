@@ -1,0 +1,670 @@
+{
+  "fecha_referencia": "2026-11-25T12:00:00",
+  "casos": [
+    {
+      "identificador": "P01",
+      "categoria": "Problematico",
+      "descripcion": "Respaldo fallido durante la comprobación final.",
+      "entrada": {
+        "identificador": "P01",
+        "modelo_servicio": "Infraestructura como servicio",
+        "activo": "Activo sintético P01",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Fallido",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 20,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Transferencia completa; fallo sintético al cerrar y comprobar la copia."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "estado_respaldo: Fallido.",
+            "interpretacion_contiene": "No existe evidencia de una copia satisfactoria."
+          }
+        ]
+      },
+      "justificacion": "Aunque se transfirió el 100 %, el proceso terminó en Fallido y no acredita una copia satisfactoria.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "P02",
+      "categoria": "Problematico",
+      "descripcion": "Respaldo incompleto al 72 %.",
+      "entrada": {
+        "identificador": "P02",
+        "modelo_servicio": "Plataforma como servicio",
+        "activo": "Activo sintético P02",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Incompleto",
+        "porcentaje_completitud": 72,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 20,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "completitud:",
+            "interpretacion_contiene": "El respaldo presenta evidencia de ejecución incompleta."
+          }
+        ]
+      },
+      "justificacion": "El estado Incompleto y el 72 % de completitud exigen revisar los elementos faltantes.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "P03",
+      "categoria": "Problematico",
+      "descripcion": "Respaldo exitoso con 72 horas de antigüedad.",
+      "entrada": {
+        "identificador": "P03",
+        "modelo_servicio": "Software como servicio",
+        "activo": "Activo sintético P03",
+        "fecha_respaldo": "2026-11-22T12:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 20,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "horas; límite:",
+            "interpretacion_contiene": "El respaldo supera la antigüedad máxima definida."
+          }
+        ]
+      },
+      "justificacion": "72 horas superan el doble del límite de 24 horas; corresponde prioridad Alta.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "P04",
+      "categoria": "Problematico",
+      "descripcion": "Respaldo exitoso sin ninguna prueba de restauración.",
+      "entrada": {
+        "identificador": "P04",
+        "modelo_servicio": "Infraestructura como servicio",
+        "activo": "Activo sintético P04",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": null,
+        "estado_ultima_restauracion": "Desconocido",
+        "tiempo_restauracion_minutos": null,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "En este escenario sintético nunca se ha ejecutado una prueba de restauración."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "No concluyente",
+            "evidencia_contiene": "Evidencia de restauración: faltan fecha_ultima_restauracion.",
+            "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+          },
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "Fecha de restauración:",
+            "interpretacion_contiene": "La existencia del respaldo no demuestra recuperabilidad."
+          },
+          {
+            "prioridad": "No concluyente",
+            "evidencia_contiene": "Antigüedad de la prueba: faltan fecha_ultima_restauracion.",
+            "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+          },
+          {
+            "prioridad": "No concluyente",
+            "evidencia_contiene": "Tiempo de restauración: faltan tiempo_restauracion_minutos.",
+            "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+          }
+        ]
+      },
+      "justificacion": "La ausencia declarada de una prueba genera Alta; faltan fecha, estado verificable y duración para completar las comprobaciones.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "P05",
+      "categoria": "Problematico",
+      "descripcion": "Última restauración fallida.",
+      "entrada": {
+        "identificador": "P05",
+        "modelo_servicio": "Plataforma como servicio",
+        "activo": "Activo sintético P05",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Fallido",
+        "tiempo_restauracion_minutos": 20,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "estado_ultima_restauracion: Fallido.",
+            "interpretacion_contiene": "La última restauración reportada falló."
+          }
+        ]
+      },
+      "justificacion": "La prueba reciente falló; su corta duración no acredita una restauración satisfactoria.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "P06",
+      "categoria": "Problematico",
+      "descripcion": "Restauración exitosa en 240 minutos frente a un máximo de 60.",
+      "entrada": {
+        "identificador": "P06",
+        "modelo_servicio": "Software como servicio",
+        "activo": "Activo sintético P06",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 240,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "máximo permitido:",
+            "interpretacion_contiene": "no cumple el objetivo de recuperación definido."
+          }
+        ]
+      },
+      "justificacion": "La restauración tardó cuatro veces el objetivo de recuperación; corresponde prioridad Alta.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "P07",
+      "categoria": "Problematico",
+      "descripcion": "Última prueba de restauración realizada hace 45 días.",
+      "entrada": {
+        "identificador": "P07",
+        "modelo_servicio": "Infraestructura como servicio",
+        "activo": "Activo sintético P07",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-10-11T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 20,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Media",
+            "evidencia_contiene": "45.00 días; límite: 30 días.",
+            "interpretacion_contiene": "La prueba de restauración supera la antigüedad máxima definida."
+          }
+        ]
+      },
+      "justificacion": "45 días superan el límite de 30 días para la prueba; corresponde prioridad Media.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "P08",
+      "categoria": "Problematico",
+      "descripcion": "Respaldo incompleto y antiguo, restauración fallida y tiempo excedido.",
+      "entrada": {
+        "identificador": "P08",
+        "modelo_servicio": "Plataforma como servicio",
+        "activo": "Activo sintético P08",
+        "fecha_respaldo": "2026-11-21T12:00:00",
+        "estado_respaldo": "Incompleto",
+        "porcentaje_completitud": 40,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Fallido",
+        "tiempo_restauracion_minutos": 180,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "completitud:",
+            "interpretacion_contiene": "El respaldo presenta evidencia de ejecución incompleta."
+          },
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "horas; límite:",
+            "interpretacion_contiene": "El respaldo supera la antigüedad máxima definida."
+          },
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "estado_ultima_restauracion: Fallido.",
+            "interpretacion_contiene": "La última restauración reportada falló."
+          },
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "máximo permitido:",
+            "interpretacion_contiene": "no cumple el objetivo de recuperación definido."
+          }
+        ]
+      },
+      "justificacion": "El 40 %, las 96 horas frente a 24, el estado Fallido y los 180 minutos frente a 60 generan cuatro hallazgos Alta independientes.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "L01",
+      "categoria": "Legitimo",
+      "descripcion": "Respaldo frecuente y restauración breve.",
+      "entrada": {
+        "identificador": "L01",
+        "modelo_servicio": "Software como servicio",
+        "activo": "Activo sintético L01",
+        "fecha_respaldo": "2026-11-25T11:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 5,
+        "tiempo_maximo_recuperacion_minutos": 15,
+        "antiguedad_maxima_respaldo_horas": 6,
+        "antiguedad_maxima_prueba_restauracion_dias": 7,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Baja",
+            "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+            "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+          }
+        ]
+      },
+      "justificacion": "1 hora frente a 6; prueba de 1 día frente a 7; restauración de 5 minutos frente a 15. No se garantiza recuperabilidad real solo con estos datos.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "L02",
+      "categoria": "Legitimo",
+      "descripcion": "Respaldo diario con prueba semanal.",
+      "entrada": {
+        "identificador": "L02",
+        "modelo_servicio": "Infraestructura como servicio",
+        "activo": "Activo sintético L02",
+        "fecha_respaldo": "2026-11-25T00:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-20T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 35,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 7,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Baja",
+            "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+            "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+          }
+        ]
+      },
+      "justificacion": "12 horas frente a 24; prueba de 5 días frente a 7; restauración de 35 minutos frente a 60. No se garantiza recuperabilidad real solo con estos datos.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "L03",
+      "categoria": "Legitimo",
+      "descripcion": "Respaldo reciente y recuperación de un servicio pequeño.",
+      "entrada": {
+        "identificador": "L03",
+        "modelo_servicio": "Plataforma como servicio",
+        "activo": "Activo sintético L03",
+        "fecha_respaldo": "2026-11-25T11:30:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-25T00:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 2,
+        "tiempo_maximo_recuperacion_minutos": 10,
+        "antiguedad_maxima_respaldo_horas": 2,
+        "antiguedad_maxima_prueba_restauracion_dias": 3,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Baja",
+            "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+            "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+          }
+        ]
+      },
+      "justificacion": "30 minutos frente a 2 horas; prueba de 12 horas frente a 3 días; restauración de 2 minutos frente a 10. No se garantiza recuperabilidad real solo con estos datos.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "L04",
+      "categoria": "Legitimo",
+      "descripcion": "Respaldo y restauración exactamente en los límites permitidos.",
+      "entrada": {
+        "identificador": "L04",
+        "modelo_servicio": "Software como servicio",
+        "activo": "Activo sintético L04",
+        "fecha_respaldo": "2026-11-24T12:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-10-26T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 60,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Baja",
+            "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+            "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+          }
+        ]
+      },
+      "justificacion": "24 horas, 30 días y 60 minutos igualan sus límites; igualar no significa exceder. No se garantiza recuperabilidad real solo con estos datos.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "L05",
+      "categoria": "Legitimo",
+      "descripcion": "Ventana de respaldo de 48 horas y recuperación extensa permitida.",
+      "entrada": {
+        "identificador": "L05",
+        "modelo_servicio": "Infraestructura como servicio",
+        "activo": "Activo sintético L05",
+        "fecha_respaldo": "2026-11-24T00:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-15T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 90,
+        "tiempo_maximo_recuperacion_minutos": 120,
+        "antiguedad_maxima_respaldo_horas": 48,
+        "antiguedad_maxima_prueba_restauracion_dias": 14,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Baja",
+            "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+            "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+          }
+        ]
+      },
+      "justificacion": "36 horas frente a 48; prueba de 10 días frente a 14; restauración de 90 minutos frente a 120. No se garantiza recuperabilidad real solo con estos datos.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "L06",
+      "categoria": "Legitimo",
+      "descripcion": "Respaldo cada cuatro horas y prueba de restauración reciente.",
+      "entrada": {
+        "identificador": "L06",
+        "modelo_servicio": "Plataforma como servicio",
+        "activo": "Activo sintético L06",
+        "fecha_respaldo": "2026-11-25T09:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-23T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 12,
+        "tiempo_maximo_recuperacion_minutos": 20,
+        "antiguedad_maxima_respaldo_horas": 4,
+        "antiguedad_maxima_prueba_restauracion_dias": 5,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Baja",
+            "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+            "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+          }
+        ]
+      },
+      "justificacion": "3 horas frente a 4; prueba de 2 días frente a 5; restauración de 12 minutos frente a 20. No se garantiza recuperabilidad real solo con estos datos.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "L07",
+      "categoria": "Legitimo",
+      "descripcion": "Servicio con objetivo estricto de recuperación.",
+      "entrada": {
+        "identificador": "L07",
+        "modelo_servicio": "Software como servicio",
+        "activo": "Activo sintético L07",
+        "fecha_respaldo": "2026-11-25T11:45:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-25T06:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 1,
+        "tiempo_maximo_recuperacion_minutos": 3,
+        "antiguedad_maxima_respaldo_horas": 1,
+        "antiguedad_maxima_prueba_restauracion_dias": 1,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Baja",
+            "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+            "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+          }
+        ]
+      },
+      "justificacion": "15 minutos frente a 1 hora; prueba de 6 horas frente a 1 día; restauración de 1 minuto frente a 3. No se garantiza recuperabilidad real solo con estos datos.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "L08",
+      "categoria": "Legitimo",
+      "descripcion": "Respaldo y prueba con márgenes amplios documentados.",
+      "entrada": {
+        "identificador": "L08",
+        "modelo_servicio": "Infraestructura como servicio",
+        "activo": "Activo sintético L08",
+        "fecha_respaldo": "2026-11-25T04:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-05T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 45,
+        "tiempo_maximo_recuperacion_minutos": 90,
+        "antiguedad_maxima_respaldo_horas": 12,
+        "antiguedad_maxima_prueba_restauracion_dias": 60,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Baja",
+            "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+            "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+          }
+        ]
+      },
+      "justificacion": "8 horas frente a 12; prueba de 20 días frente a 60; restauración de 45 minutos frente a 90. No se garantiza recuperabilidad real solo con estos datos.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "A01",
+      "categoria": "Ambiguo",
+      "descripcion": "Restauración declarada exitosa sin fecha registrada.",
+      "entrada": {
+        "identificador": "A01",
+        "modelo_servicio": "Plataforma como servicio",
+        "activo": "Activo sintético A01",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": null,
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 20,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Se declara una prueba exitosa, pero no se adjuntó su fecha."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "No concluyente",
+            "evidencia_contiene": "Evidencia de restauración: faltan fecha_ultima_restauracion.",
+            "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+          },
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "Fecha de restauración:",
+            "interpretacion_contiene": "La existencia del respaldo no demuestra recuperabilidad."
+          },
+          {
+            "prioridad": "No concluyente",
+            "evidencia_contiene": "Antigüedad de la prueba: faltan fecha_ultima_restauracion.",
+            "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+          }
+        ]
+      },
+      "justificacion": "No puede verificarse cuándo ocurrió la prueba; se generan dos No concluyente y una alerta Alta por falta de evidencia fechada.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "A02",
+      "categoria": "Ambiguo",
+      "descripcion": "Restauración exitosa sin duración registrada.",
+      "entrada": {
+        "identificador": "A02",
+        "modelo_servicio": "Software como servicio",
+        "activo": "Activo sintético A02",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": null,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "No concluyente",
+            "evidencia_contiene": "Tiempo de restauración: faltan tiempo_restauracion_minutos.",
+            "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+          }
+        ]
+      },
+      "justificacion": "Sin tiempo_restauracion_minutos no puede comprobarse el objetivo de recuperación; no se inventa una duración.",
+      "reservado_evaluacion_final": false
+    },
+    {
+      "identificador": "A03",
+      "categoria": "Ambiguo",
+      "descripcion": "Prueba fechada con estado Desconocido y duración no registrada.",
+      "entrada": {
+        "identificador": "A03",
+        "modelo_servicio": "Infraestructura como servicio",
+        "activo": "Activo sintético A03",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": 100,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Desconocido",
+        "tiempo_restauracion_minutos": null,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Solo se conserva una fecha de ejecución; no se registraron el resultado ni la duración."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "Alta",
+            "evidencia_contiene": "Fecha de restauración:",
+            "interpretacion_contiene": "La existencia del respaldo no demuestra recuperabilidad."
+          },
+          {
+            "prioridad": "No concluyente",
+            "evidencia_contiene": "Tiempo de restauración: faltan tiempo_restauracion_minutos.",
+            "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+          }
+        ]
+      },
+      "justificacion": "El estado Desconocido genera Alta por falta de evidencia de recuperabilidad; la duración ausente genera No concluyente sobre el objetivo temporal.",
+      "reservado_evaluacion_final": true
+    },
+    {
+      "identificador": "A04",
+      "categoria": "Ambiguo",
+      "descripcion": "Estado exitoso con cobertura no cuantificada y notas contradictorias.",
+      "entrada": {
+        "identificador": "A04",
+        "modelo_servicio": "Plataforma como servicio",
+        "activo": "Activo sintético A04",
+        "fecha_respaldo": "2026-11-25T10:00:00",
+        "estado_respaldo": "Exitoso",
+        "porcentaje_completitud": null,
+        "fecha_ultima_restauracion": "2026-11-24T12:00:00",
+        "estado_ultima_restauracion": "Exitoso",
+        "tiempo_restauracion_minutos": 20,
+        "tiempo_maximo_recuperacion_minutos": 60,
+        "antiguedad_maxima_respaldo_horas": 24,
+        "antiguedad_maxima_prueba_restauracion_dias": 30,
+        "observaciones": "Una nota sintética indica cobertura total y otra indica elementos omitidos; no hay inventario ni porcentaje que permitan resolver la contradicción."
+      },
+      "resultado_esperado": {
+        "hallazgos": [
+          {
+            "prioridad": "No concluyente",
+            "evidencia_contiene": "Completitud del respaldo: faltan porcentaje_completitud.",
+            "interpretacion_contiene": "No hay información suficiente para completar esta comprobación."
+          }
+        ]
+      },
+      "justificacion": "Falta porcentaje_completitud. Las notas no permiten reconstruirlo: el motor no interpreta texto libre ni resuelve la contradicción; corresponde No concluyente.",
+      "reservado_evaluacion_final": true
+    }
+  ]
+}

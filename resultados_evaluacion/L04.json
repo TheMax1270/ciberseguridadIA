@@ -1,0 +1,179 @@
+{
+  "identificador_analisis": "b1963152-1527-4012-80c5-023659a08386",
+  "fecha_analisis": "2026-11-25T08:32:52.626511+00:00",
+  "fecha_referencia": "2026-11-25T12:00:00+00:00",
+  "modelo": "llama3.2:3b",
+  "ejecucion_evaluacion": {
+    "identificador": "67c60c1e-7480-4208-b657-cd12baa2ae11",
+    "inicio_utc": "2026-11-25T08:31:44.328462+00:00",
+    "sha256_casos": "b7618ce305947e0e201703bbbf85809d77f3d88ab7862e1fa04132b18fbd0edc",
+    "modelo": "llama3.2:3b"
+  },
+  "contraste_expectativa_determinista": {
+    "coincide": true,
+    "expectativas_no_encontradas": [],
+    "hallazgos_adicionales": []
+  },
+  "tipo_analisis": "Validación determinista",
+  "datos_entrada": {
+    "identificador": "L04",
+    "modelo_servicio": "Software como servicio",
+    "activo": "Activo sintético L04",
+    "fecha_respaldo": "2026-11-24T12:00:00+00:00",
+    "estado_respaldo": "Exitoso",
+    "porcentaje_completitud": 100,
+    "fecha_ultima_restauracion": "2026-10-26T12:00:00+00:00",
+    "estado_ultima_restauracion": "Exitoso",
+    "tiempo_restauracion_minutos": 60,
+    "tiempo_maximo_recuperacion_minutos": 60,
+    "antiguedad_maxima_respaldo_horas": 24,
+    "antiguedad_maxima_prueba_restauracion_dias": 30,
+    "observaciones": "Reporte y evidencia de laboratorio totalmente sintéticos."
+  },
+  "hallazgos": [
+    {
+      "identificador": "L04",
+      "evidencia": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+      "interpretacion": "No se identificaron incumplimientos objetivos en los datos suministrados.",
+      "prioridad": "Baja",
+      "recomendacion": "Mantener los respaldos y las pruebas controladas de restauración.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    }
+  ],
+  "total_hallazgos": 1,
+  "cantidad_por_prioridad": {
+    "Alta": 0,
+    "Media": 0,
+    "Baja": 1,
+    "No concluyente": 0
+  },
+  "requiere_revision_humana": true,
+  "analisis_asistido": {
+    "identificador_analisis": "e1d9b8af-7f43-4eb6-8d68-6b3a1ba98996",
+    "modelo": "llama3.2:3b",
+    "fecha_analisis": "2026-11-25T08:32:52.626680+00:00",
+    "duracion_segundos": 5.926,
+    "entrada_utilizada": {
+      "modelo_servicio": "Software como servicio",
+      "fecha_respaldo": "2026-11-24T12:00:00+00:00",
+      "estado_respaldo": "Exitoso",
+      "porcentaje_completitud": 100,
+      "fecha_ultima_restauracion": "2026-10-26T12:00:00+00:00",
+      "estado_ultima_restauracion": "Exitoso",
+      "tiempo_restauracion_minutos": 60,
+      "tiempo_maximo_recuperacion_minutos": 60,
+      "antiguedad_maxima_respaldo_horas": 24,
+      "antiguedad_maxima_prueba_restauracion_dias": 30
+    },
+    "campos_texto_libre_omitidos": [
+      "identificador",
+      "activo",
+      "observaciones"
+    ],
+    "hallazgos_deterministas_entregados": [
+      {
+        "evidencia": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+        "interpretacion": "No se identificaron incumplimientos objetivos en los datos suministrados.",
+        "prioridad": "Baja",
+        "recomendacion": "Mantener los respaldos y las pruebas controladas de restauración.",
+        "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+      }
+    ],
+    "respuesta_estructurada": {
+      "interpretacion_general": "El respaldo del servicio de software como servicio ha sido exitoso y se ha completado con una alta completitud.",
+      "nivel_riesgo_sugerido": "Alta",
+      "recomendacion": "Revisar la calidad y autenticidad de la evidencia suministrada para garantizar la recuperabilidad real del servicio.",
+      "informacion_faltante": [
+        "Descripción detallada de la evidencia suministrada",
+        "Explicación adicional de la calidad y autenticidad de la evidencia suministrada"
+      ],
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada.",
+      "decision_humana_requerida": true
+    },
+    "errores": [],
+    "estado": "completado",
+    "requiere_revision_humana": true,
+    "estado_ollama": {
+      "servicio_disponible": true,
+      "modelo_instalado": true,
+      "modelo": "llama3.2:3b",
+      "mensaje": "Ollama local disponible."
+    },
+    "identificador_validacion": "b1963152-1527-4012-80c5-023659a08386"
+  },
+  "comparacion": {
+    "validacion_mediante_reglas": {
+      "cantidad_hallazgos": 1,
+      "prioridad_maxima": "Baja",
+      "principales_evidencias": [
+        "Las comprobaciones sobre los datos suministrados fueron satisfactorias."
+      ]
+    },
+    "analisis_asistido": {
+      "nivel_riesgo_sugerido": "Alta",
+      "interpretacion": "El respaldo del servicio de software como servicio ha sido exitoso y se ha completado con una alta completitud.",
+      "recomendacion": "Revisar la calidad y autenticidad de la evidencia suministrada para garantizar la recuperabilidad real del servicio.",
+      "limitacion": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada."
+    },
+    "coinciden_niveles": false,
+    "revision_humana": "Existe una diferencia entre prioridad objetiva y riesgo sugerido que debe revisar una persona.",
+    "requiere_revision_humana": true
+  },
+  "origen_resultados": {
+    "hallazgos": "Reglas deterministas: hechos objetivos",
+    "analisis_asistido": "Modelo local: apoyo interpretativo sujeto a revisión humana"
+  },
+  "evaluacion": {
+    "identificador": "L04",
+    "categoria": "Legitimo",
+    "modelo_servicio": "SaaS",
+    "reservado_evaluacion_final": false,
+    "resultado_esperado": {
+      "hallazgos": [
+        {
+          "prioridad": "Baja",
+          "evidencia_contiene": "Las comprobaciones sobre los datos suministrados fueron satisfactorias.",
+          "interpretacion_contiene": "No se identificaron incumplimientos objetivos en los datos suministrados."
+        }
+      ]
+    },
+    "prioridad_maxima_esperada": "Baja",
+    "cantidad_hallazgos_deterministas": 1,
+    "prioridad_maxima_reglas": "Baja",
+    "reglas_ejecutadas": true,
+    "reglas_coinciden_con_esperado": true,
+    "respuesta_ia_valida": true,
+    "estado_ia": "completado",
+    "nivel_riesgo_sugerido_ia": "Alta",
+    "coinciden_reglas_ia": false,
+    "ia_coincide_con_nivel_esperado": false,
+    "interpretacion_ia": "El respaldo del servicio de software como servicio ha sido exitoso y se ha completado con una alta completitud.",
+    "recomendacion_ia": "Revisar la calidad y autenticidad de la evidencia suministrada para garantizar la recuperabilidad real del servicio.",
+    "informacion_faltante_ia": [
+      "Descripción detallada de la evidencia suministrada",
+      "Explicación adicional de la calidad y autenticidad de la evidencia suministrada"
+    ],
+    "limitacion_ia": "Este resultado no garantiza por sí solo la recuperabilidad real del servicio; depende de la calidad y autenticidad de la evidencia suministrada.",
+    "tiempo_respuesta_segundos": 5.926,
+    "duracion_total_caso_segundos": 5.926,
+    "errores": [],
+    "incidencias_automaticas": [
+      "Discrepancia entre prioridad de reglas y nivel sugerido por IA.",
+      "Texto igual en recomendacion_ia para A04, L01, L02, L03, L04, L05, L06, L08; revisar si es apropiado."
+    ],
+    "revision_semantica_humana": "Pendiente",
+    "requiere_revision_humana": true,
+    "ejecutado_correctamente": true,
+    "evidencias_deterministas": [
+      "Las comprobaciones sobre los datos suministrados fueron satisfactorias."
+    ],
+    "recomendaciones_reglas": [
+      "Mantener los respaldos y las pruebas controladas de restauración."
+    ]
+  },
+  "postprocesamiento_evaluacion": {
+    "fecha_utc": "2026-11-25T08:35:47.991510+00:00",
+    "descripcion": "Controles automáticos adicionales sobre las mismas respuestas reales; sin repetir inferencias ni modificar el modelo.",
+    "sha256_evaluador": "fe9deabd2f9bf9af0cc2d28e590fe6046fc0ca579d4f0b94a6a418da576c3f33"
+  }
+}

@@ -1,0 +1,6 @@
+# Conservar exactamente los bytes de las evidencias y sus huellas de auditoría.
+data/casos_prueba.json -text
+resultados_evaluacion/** -text
+resultados_evaluacion_v2/** -text
+resultados_evaluacion_v2_intento_intermedio/** -text
+resultados_evaluacion_v2_intento_intermedio_2/** -text

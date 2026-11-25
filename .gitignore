@@ -1,0 +1,64 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.env
+.env.*
+.streamlit/secrets.toml
+
+# Entornos, herramientas y configuraciones personales.
+venv/
+env/
+.python-version
+.vscode/
+.idea/
+*.code-workspace
+.codex/
+.agents/
+.aws/
+.ssh/
+.ipynb_checkpoints/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Temporales y archivos de respaldo; los resultados se publican en sus carpetas.
+*.tmp
+*.temp
+*.bak
+*.log
+*~
+*.zip
+.publish_*
+.DS_Store
+Thumbs.db
+
+# Credenciales y material criptográfico.
+.git-credentials
+.netrc
+credentials*.json
+secrets*.json
+*.pem
+*.key
+*.p12
+*.pfx
+*.kdbx
+
+# Modelos locales de Ollama y pesos descargados.
+.ollama/
+ollama_models/
+models/
+*.gguf
+*.safetensors
+*.bin
+*.pt
+*.pth
+
+# Evitar publicar evidencia o resultados que puedan contener datos sensibles.
+data/*
+!data/.gitkeep
+!data/casos_prueba.json
+!data/README_casos.md
+resultados/*
+!resultados/.gitkeep
